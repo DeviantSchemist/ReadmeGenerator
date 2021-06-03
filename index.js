@@ -36,7 +36,7 @@ prompt([
     type: 'rawlist',
     name: 'license',
     message: 'What license do you have?',
-    choices: ['MIT', 'Apache%202.0', 'GPL%203.0', 'BSD%203', 'None']
+    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
   },
   {
     type: 'input',
@@ -55,10 +55,59 @@ prompt([
 ])
 .then(answers => {
 
+  switch(answers.license) {
+    case 'MIT':
+      answers.license = `
+  ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+  **NOTICE**:
+
+  This application uses MIT licensing.
+
+      `
+      break
+    case 'APACHE 2.0':
+      answers.license = `
+  ![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
+  
+  **NOTICE**:
+
+  This application uses Apache 2.0 licensing.
+
+      `
+      break
+    case 'GPL 3.0':
+      answers.license = `
+  ![GitHub license](https://img.shields.io/badge/license-GPL%203.0-blue.svg)
+
+  **NOTICE**:
+
+  This application uses GPL 3.0 licensing.
+
+      `
+      break
+    case 'BSD 3':
+      answers.license = `
+  ![GitHub license](https://img.shields.io/badge/license-BSD%203-blue.svg)
+
+  **NOTICE**:
+  
+  This application uses BSD 3 licensing.
+
+      `
+      break
+    default:
+      answers.license = `
+  ![GitHub license](https://img.shields.io/badge/license-None-blue.svg)
+
+      `
+      break
+  }
+
   let readme = `
   # ${answers.title}
 
-  ![GitHub license](https://img.shields.io/badge/license-${answers.license}-blue.svg)
+  ${answers.license}
 
   ### Table of Contents
   [Description](https://github.com/DeviantSchemist/ReadmeGenerator#description)
