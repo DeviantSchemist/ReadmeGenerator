@@ -36,7 +36,7 @@ prompt([
     type: 'rawlist',
     name: 'license',
     message: 'What license do you have?',
-    choices: ['ah', 'bah', 'cah']
+    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
   },
   {
     type: 'input',
@@ -54,6 +54,39 @@ prompt([
   }
 ])
 .then(answers => {
+
+  let readme = `
+    # ${answers.title}
+
+    ![GitHub license](https://img.shields.io/badge/license-${answers.license}-blue.svg)
+
+    [Description](https://github.com/DeviantSchemist/ReadmeGenerator#description)
+    [Installation](https://github.com/DeviantSchemist/ReadmeGenerator#installation)
+    [Usage](https://github.com/DeviantSchemist/ReadmeGenerator#usage)
+    [Contribution](https://github.com/DeviantSchemist/ReadmeGenerator#contribution)
+    [Tests](https://github.com/DeviantSchemist/ReadmeGenerator#tests)
+    [Questions](https://github.com/DeviantSchemist/ReadmeGenerator#questions)
+
+    # Description
+    ${answers.description}
+
+    # Installation
+    ${answers.installation}
+
+    # Usage
+    ${answers.usage}
+
+    # Contribution
+    ${answers.contribution}
+
+    # Tests
+    ${answers.test}
+
+    # Questions
+    Github: [${answers.username}](https://github.com/${answers.username})
+    Email: ${answers.email}
+  `
+
   console.log(answers)
 })
 .catch(err => console.error(err))
