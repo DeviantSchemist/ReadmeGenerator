@@ -14,7 +14,22 @@ prompt([
   },
   {
     type: 'input',
-    name: 'table',
-    message: 
+    name: 'installation',
+    message: 'Installation instructions: '
+  },
+  {
+    type: 'input',
+    name: 'usage',
+    message: 'Usage information: '
+  },
+  {
+    type: 'input',
+    name: 'contribution',
+    message: 'Contribution guidelines: '
+  },
+  {
+    type: 'input',
+    name: 'test',
+    message: 'Test instructions: '
   }
 ])
