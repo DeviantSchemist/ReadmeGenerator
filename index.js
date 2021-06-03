@@ -56,37 +56,42 @@ prompt([
 .then(answers => {
 
   let readme = `
-    # ${answers.title}
+  # ${answers.title}
 
-    ![GitHub license](https://img.shields.io/badge/license-${answers.license}-blue.svg)
+  ![GitHub license](https://img.shields.io/badge/license-${answers.license}-blue.svg)
 
-    [Description](https://github.com/DeviantSchemist/ReadmeGenerator#description)
-    [Installation](https://github.com/DeviantSchemist/ReadmeGenerator#installation)
-    [Usage](https://github.com/DeviantSchemist/ReadmeGenerator#usage)
-    [Contribution](https://github.com/DeviantSchemist/ReadmeGenerator#contribution)
-    [Tests](https://github.com/DeviantSchemist/ReadmeGenerator#tests)
-    [Questions](https://github.com/DeviantSchemist/ReadmeGenerator#questions)
+  ### Table of Contents
+  [Description](https://github.com/DeviantSchemist/ReadmeGenerator#description)
+  [Installation](https://github.com/DeviantSchemist/ReadmeGenerator#installation)
+  [Usage](https://github.com/DeviantSchemist/ReadmeGenerator#usage)
+  [Contribution](https://github.com/DeviantSchemist/ReadmeGenerator#contribution)
+  [Tests](https://github.com/DeviantSchemist/ReadmeGenerator#tests)
+  [Questions](https://github.com/DeviantSchemist/ReadmeGenerator#questions)
 
-    # Description
-    ${answers.description}
+  # Description
+  ${answers.description}
 
-    # Installation
-    ${answers.installation}
+  # Installation
+  ${answers.installation}
 
-    # Usage
-    ${answers.usage}
+  # Usage
+  ${answers.usage}
 
-    # Contribution
-    ${answers.contribution}
+  # Contribution
+  ${answers.contribution}
 
-    # Tests
-    ${answers.test}
+  # Tests
+  ${answers.test}
 
-    # Questions
-    Github: [${answers.username}](https://github.com/${answers.username})
-    Email: ${answers.email}
+  # Questions
+  Github: [${answers.username}](https://github.com/${answers.username})
+  Email: ${answers.email}
   `
-
-  console.log(answers)
+  writeFile('README.md', readme, err => {
+    if (err) {console.error(err)}
+    else {
+      console.log('Readme file successfully created!')
+    }
+  })
 })
 .catch(err => console.error(err))
