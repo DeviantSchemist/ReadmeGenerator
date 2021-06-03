@@ -36,7 +36,7 @@ prompt([
     type: 'rawlist',
     name: 'license',
     message: 'What license do you have?',
-    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
+    choices: ['MIT', 'Apache%202.0', 'GPL%203.0', 'BSD%203', 'None']
   },
   {
     type: 'input',
@@ -62,10 +62,15 @@ prompt([
 
   ### Table of Contents
   [Description](https://github.com/DeviantSchemist/ReadmeGenerator#description)
+
   [Installation](https://github.com/DeviantSchemist/ReadmeGenerator#installation)
+
   [Usage](https://github.com/DeviantSchemist/ReadmeGenerator#usage)
+
   [Contribution](https://github.com/DeviantSchemist/ReadmeGenerator#contribution)
+
   [Tests](https://github.com/DeviantSchemist/ReadmeGenerator#tests)
+
   [Questions](https://github.com/DeviantSchemist/ReadmeGenerator#questions)
 
   # Description
@@ -85,6 +90,7 @@ prompt([
 
   # Questions
   Github: [${answers.username}](https://github.com/${answers.username})
+
   Email: ${answers.email}
   `
   writeFile('README.md', readme, err => {
