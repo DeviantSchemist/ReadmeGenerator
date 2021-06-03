@@ -91,7 +91,7 @@ prompt([
   ![GitHub license](https://img.shields.io/badge/license-BSD%203-blue.svg)
 
   **NOTICE**:
-  
+
   This application uses BSD 3 licensing.
 
       `
@@ -122,22 +122,24 @@ prompt([
 
   [Questions](https://github.com/DeviantSchemist/ReadmeGenerator#questions)
 
-  # Description
+  ## Description
   ${answers.description}
 
-  # Installation
+  ## Installation
   ${answers.installation}
 
-  # Usage
+  ## Usage
   ${answers.usage}
 
-  # Contribution
+  ## Contribution
   ${answers.contribution}
 
-  # Tests
+  ## Tests
   ${answers.test}
 
-  # Questions
+  ## Questions
+  If you have additional questions, please see below for my contact information.
+
   Github: [${answers.username}](https://github.com/${answers.username})
 
   Email: ${answers.email}
