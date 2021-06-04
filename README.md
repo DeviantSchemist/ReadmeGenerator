@@ -1,29 +1,19 @@
 # ReadmeGenerator
+Want to create a good README but just don't have the time? This is the application for you! README files are what give your application a story, one that is crafted by you, the developer, in order for others to understand what you built.
 
-## User Story
 
-```
-AS A developer
-I WANT a README generator
-SO THAT can quickly create a professional README for a new project
-```
+## Description
+* Utilizes the npm module "Inquirer" in order to prompt the user for their responses. The responses are then displayed onto the README file, following the guidelines of this assignment
+* Utilizes node.js to write to the README file
+* Github for version control
 
-## Acceptance Criteria
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added hear the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-```
+## Installation Instructions
+Have Node.js installed on your computer. All you need is a code editor like VS Code in order to run it in the program terminal.
+
+
+## Usage
+Run this command: node index.js, in the terminal of the code editor of your choice (in my case, VS Code) and prompts will appear which will allow you to enter the information. Once you are done inputting everything, a success message will appear and tell you that the README file has been successfully generated.
+
+## Screenshot
+<img src="./Screenshot.png" alt="Project Screenshot" />
